@@ -1,0 +1,28 @@
+{
+  "name": "commonform-tex",
+  "description": "render Common Forms in TeX",
+  "version": "0.0.0-prerelease",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
+  "dependencies": {
+    "commonform-flatten": "~0.4.0",
+    "decimal-numbering": "~1.0.0",
+    "escape-latex": "~0.1.2"
+  },
+  "devDependencies": {
+    "jscs": "~1.13.1",
+    "jshint": "~2.8.0"
+  },
+  "homepage": "https://commonform.github.io",
+  "keywords": [
+    "TeX",
+    "contracts",
+    "law"
+  ],
+  "license": "Apache-2.0",
+  "main": "source/index",
+  "repository": "commonform/commonform-tex",
+  "scripts": {
+    "lint": "jshint source && jscs source",
+    "precommit": "npm run lint"
+  }
+}
