@@ -12,7 +12,7 @@ var blankLine = (
 module.exports = function run(element, numberStyle, conspicuous) {
   if (typeof element === 'string') {
     if (conspicuous) {
-      return '{\\bf\\it ' + preprocess(element) + '}';
+      return '{\\bi ' + preprocess(element) + '}';
     } else {
       return preprocess(element);
     }
