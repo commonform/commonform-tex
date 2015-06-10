@@ -1,7 +1,7 @@
 {
   "name": "commonform-tex",
   "description": "render Common Forms in TeX",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (http://kemitchell.com)",
   "dependencies": {
     "commonform-flatten": "~0.4.0",
