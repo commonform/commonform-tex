@@ -6,7 +6,7 @@ var preprocess = function(input) {
 };
 
 var blankLine = (
-  '{\\leavevmode \\kern.06em \\vbox{\\hrule width5\\parindent}}'
+  '{\\leavevmode \\vbox{\\hrule width5\\parindent}}'
 );
 
 module.exports = function run(element, numberStyle, conspicuous) {
