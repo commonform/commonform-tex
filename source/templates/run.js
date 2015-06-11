@@ -15,7 +15,7 @@ module.exports = function run(element, numberStyle, conspicuous) {
       return preprocess(element);
     }
   } else if (element.hasOwnProperty('definition')) {
-    return '``{\\it ' + element.definition + '}\'\'';
+    return '{``\\it ' + element.definition + '\'\'}';
   } else if (element.hasOwnProperty('blank')) {
     return blankLine + ' (' + preprocess(element.blank) + ')';
   } else if (element.hasOwnProperty('reference')) {
