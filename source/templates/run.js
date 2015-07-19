@@ -18,18 +18,20 @@ module.exports = function run(element, numberStyle, conspicuous) {
     return '{``\\it ' + element.definition + '\'\'}';
   } else if (element.hasOwnProperty('blank')) {
     return blankLine + ' (' + preprocess(element.blank) + ')';
-  } else if (element.hasOwnProperty('reference')) {
-    var reference = element.reference;
+  } else if (element.hasOwnProperty('numbering')) {
+    var numbering = element.numbering;
+    var heading = element.heading;
     if (
       element.hasOwnProperty('broken') ||
       element.hasOwnProperty('ambiguous')
     ) {
       return (
         blankLine +
-        ' (reference to ``' + preprocess(element.reference) + '\'\')'
+        ' (reference to ``' + preprocess(heading) + '\'\')'
       );
     } else {
-      return preprocess('Section ' + numberStyle(reference));
+      return preprocess('Section ' + numberStyle(numbering) + ' (' +
+        heading + ')');
     }
   } else {
     throw new Error('Invalid type: ' + JSON.stringify(element));

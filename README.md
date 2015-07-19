@@ -3,6 +3,35 @@ commonform-tex
 
 Render Common Forms in TeX.
 
+```javascript
+var tex = require('commonform-tex');
+
+var form = {
+  content: [
+    { heading: 'IP',
+      form: {
+        content: ['An IP clause'] } },
+    { heading: 'Survival',
+      form: {
+        content: [{reference: 'IP'}] } } ] };
+
+var output = [
+  '\\noindent%',
+  '\\hskip 1\\parindent%',
+  '1. %',
+  '{\\bf IP}. %',
+  'An IP clause',
+  '',
+  '\\noindent%',
+  '\\hskip 1\\parindent%',
+  '2. %',
+  '{\\bf Survival}. %',
+  'Section 1 (IP)'
+].join('\n');
+
+tex(form, {}); // => output
+```
+
 Indentation
 -----------
 The package uses twice the standard `\parindent` dimension to indent nested provisions.
