@@ -18,7 +18,7 @@ module.exports = function run(element, numberStyle, conspicuous) {
     return '{``\\it ' + element.definition + '\'\'}';
   } else if (element.hasOwnProperty('blank')) {
     return blankLine + ' (' + preprocess(element.blank) + ')';
-  } else if (element.hasOwnProperty('numbering')) {
+  } else if (element.hasOwnProperty('heading')) {
     var numbering = element.numbering;
     var heading = element.heading;
     if (
