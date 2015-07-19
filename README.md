@@ -1,6 +1,3 @@
-commonform-tex
-==============
-
 Render Common Forms in TeX.
 
 ```javascript
@@ -33,11 +30,11 @@ tex(form, {}); // => output
 ```
 
 Indentation
------------
+===========
 The package uses twice the standard `\parindent` dimension to indent nested provisions.
 
 Bold-Italic Type
-----------------
+================
 The package outputs conspicuous type with a `\bi` macro. To define `\bi` to set type both bold and italic, try:
 
 ```tex
