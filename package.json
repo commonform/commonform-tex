@@ -10,7 +10,9 @@
   },
   "devDependencies": {
     "jscs": "~1.13.1",
-    "jshint": "~2.8.0"
+    "jshint": "~2.8.0",
+    "jsmd-tape": "^0.1.0",
+    "tape": "^4.0.1"
   },
   "homepage": "https://commonform.github.io",
   "keywords": [
@@ -22,6 +24,7 @@
   "main": "source/index",
   "repository": "commonform/commonform-tex",
   "scripts": {
+    "test": "jsmd-tape README.md | sed 's!commonform-tex!./!' | node",
     "lint": "jshint source && jscs source",
     "precommit": "npm run lint"
   }
